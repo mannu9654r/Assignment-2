@@ -14,7 +14,7 @@
     font-family:Arial, sans-serif;
 }
 
-html, body{
+html,body{
     width:100%;
     height:100%;
 }
@@ -27,41 +27,45 @@ html, body{
     justify-content:space-between;
     align-items:center;
     padding:0 3vw;
-    background:#f5f7fa;
+    background:#eef3f7;
 }
 
+/* LOGO FIXED */
 .navbar__logo{
-    font-size:1.5rem;
-    font-weight:bold;
-    color:#1e90ff;
+    font-size:1.6rem;
+    font-weight:700;
+    color:#2c3e50;
 }
 
+/* MENU */
 .navbar__menu{
     display:flex;
     list-style:none;
     gap:2vw;
 }
 
-.navbar__item{
+.navbar__menu a{
     text-decoration:none;
-    color:#333;
-    font-size:1rem;
+    color:#6c7a89;
+    font-size:0.95rem;
 }
 
-.navbar__item:hover{
+.navbar__menu a:hover{
     color:#1e90ff;
 }
 
+/* USER */
 .navbar__user{
-    background:#d9ecff;
-    padding:8px 15px;
-    border-radius:10px;
+    background:#dbeeff;
+    padding:8px 16px;
+    border-radius:12px;
     font-size:0.9rem;
+    color:#1e90ff;
 }
 
 /* HERO */
 .hero{
-    height:90vh; /* FULL SCREEN (NO SCROLL) */
+    height:90vh; /* FULL SCREEN */
     width:100%;
     display:flex;
     align-items:center;
@@ -76,8 +80,9 @@ html, body{
 
 .hero__title{
     font-size:3rem;
+    color:#2c3e50;
+    line-height:1.2;
     margin-bottom:2vh;
-    color:#333;
 }
 
 .hero__title span{
@@ -85,30 +90,34 @@ html, body{
 }
 
 .hero__desc{
-    font-size:1.1rem;
+    font-size:1rem;
+    color:#7f8c8d;
     margin-bottom:3vh;
-    color:#666;
     line-height:1.6;
 }
 
+/* BUTTON */
 .hero__btn{
-    padding:12px 25px;
-    font-size:1rem;
+    background:#2da9e9;
+    color:white;
+    padding:14px 28px;
     border:none;
-    border-radius:8px;
-    background:#1e90ff;
-    color:#fff;
+    border-radius:12px;
     cursor:pointer;
+    font-size:1rem;
 }
 
 .hero__btn:hover{
-    background:#187bcd;
+    background:#1c8ed0;
 }
 
 /* RIGHT */
 .hero__right{
     width:45%;
     height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .hero__right img{
@@ -117,12 +126,12 @@ html, body{
     object-fit:contain;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media (max-width:768px){
     .hero{
         flex-direction:column;
-        text-align:center;
         justify-content:center;
+        text-align:center;
     }
 
     .hero__left,
@@ -139,22 +148,23 @@ html, body{
     }
 }
 </style>
+
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar">
-    <div class="navbar__logo">LaundryX</div>
+    <div class="navbar__logo">Laundry</div>
 
     <ul class="navbar__menu">
-        <li><a class="navbar__item" href="#">Home</a></li>
-        <li><a class="navbar__item" href="#">Services</a></li>
-        <li><a class="navbar__item" href="#">About Us</a></li>
-        <li><a class="navbar__item" href="#">Contact Us</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
     </ul>
 
-    <div class="navbar__user">Hi, User</div>
+    <div class="navbar__user">Username</div>
 </nav>
 
 <!-- HERO -->
@@ -162,16 +172,17 @@ html, body{
 
     <div class="hero__left">
         <h1 class="hero__title">
-            Revitalize Your Clothes with Expert 
+            Revitalize Your<br>
+            Clothes with Expert<br>
             <span>Laundry Services!</span>
         </h1>
 
         <p class="hero__desc">
-            From premium dry cleaning to swift wash and fold, we deliver care and convenience. 
+            From premium dry cleaning to swift wash and fold, we deliver care and convenience.
             Schedule a pickup and rediscover the freshness of your clothes today!
         </p>
 
-        <button class="hero__btn">Book a Service Today</button>
+        <button class="hero__btn">Book a service today!</button>
     </div>
 
     <div class="hero__right">
