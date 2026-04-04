@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laundry Service</title>
-
+    <title>My Laundry</title>
     <style>
         * {
             margin: 0;
@@ -16,178 +15,161 @@
 
         html,
         body {
-            width: 100%;
-            height: 100%;
+            overflow-y: hidden;
+            font-family: sans-serif;
         }
 
-
-        .navigation {
-            height: 10vh;
-            width: 100%;
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 3vw;
-            background: #eef3f7;
+            padding: 20px 60px;
         }
-
 
         .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #2c3e50;
+            font-size: 26px;
+            font-weight: 900;
+            color: #0975c7;
         }
 
-        .menu {
+        .nav-right {
             display: flex;
-            list-style: none;
-            gap: 2vw;
+            align-items: center;
+            gap: 25px;
         }
 
-        .menu a {
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #666;
             text-decoration: none;
-            color: #6c7a89;
-            font-size: 0.95rem;
+            font-size: 14px;
         }
 
-        .menu a:hover {
-            color: #1e90ff;
+        .nav-links a:hover {
+            color: #00aaff;
         }
 
-
-        .username {
-            background: #dbeeff;
-            padding: 8px 16px;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            color: #1e90ff;
-        }
-
-
-        .box {
-            height: 90vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 3vw;
-        }
-
-        .header {
-            width: 50%;
-        }
-
-        .head1 {
-            font-size: 3rem;
-            color: #2c3e50;
-            line-height: 1.2;
-            margin-bottom: 2vh;
-        }
-
-        .head1 span {
-            color: #1e90ff;
-        }
-
-        .para {
-            font-size: 1rem;
-            color: #7f8c8d;
-            margin-bottom: 3vh;
-            line-height: 1.6;
-        }
-
-        .button {
-            background: #2da9e9;
-            color: white;
-            padding: 14px 28px;
+        .user-btn {
+            background: #eaf7ff;
             border: none;
-            border-radius: 12px;
+            padding: 8px 18px;
+            border-radius: 20px;
+            color: #00aaff;
             cursor: pointer;
-            font-size: 1rem;
         }
 
-        .button:hover {
-            background: #1c8ed0;
-        }
-
-        .photo {
-            width: 45%;
-            height: 100%;
+        .hero-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            padding: 80px 60px;
         }
 
-        .photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+        .hero-text {
+            max-width: 500px;
         }
 
+        .hero-text h1 {
+            font-size: 42px;
+            line-height: 1.3;
+            color: #4a5a68;
+        }
 
-        @media (max-width:768px) {
-            .box {
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-            }
+        .hero-text h1 span {
+            color: #00aaff;
+        }
 
-            .header,
-            .photo {
-                width: 100%;
-            }
+        .hero-text p {
+            margin: 20px 0;
+            color: #9aa5ad;
+            line-height: 1.6;
+            font-size: 14px;
+        }
 
-            .head1 {
-                font-size: 2rem;
-            }
+        .hero-btn {
+            background: #00aaff;
+            color: white;
+            border: none;
+            padding: 14px 26px;
+            border-radius: 14px;
+            cursor: pointer;
+            font-size: 14px;
+        }
 
-            .menu {
-                display: none;
-            }
+        .hero-image img {
+            width: 350px;
+        }
+
+        .nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #3399ff;
+            text-align: center;
+        }
+
+        .item {
+            float: left;
+            display: inline;
+        }
+
+        .item a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+        }
+
+        .item a:hover {
+            background-color: #a300cc;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
     </style>
-
 </head>
 
 <body>
-
-
-    <nav class="navigation">
-        <div class="logo">Logo</div>
-
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-
-        <div class="username">Username</div>
-    </nav>
-
-
-    <section class="box">
-
-        <div class="header">
-            <h1 class="head1">
-                Revitalize Your<br>
-                Clothes with Expert<br>
+    <header class="navbar">
+        <div class="logo">Fresh Fold</div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="user-btn">Username</button>
+    </header>
+    <section class="hero-container">
+        <div class="hero-text">
+            <h1>
+                Revitalize your<br>
+                clothes with Expert<br>
                 <span>Laundry Services!</span>
             </h1>
 
-            <p class="para">
-                From premium dry cleaning to swift wash and fold, we deliver care and convenience.
-                Schedule a pickup and rediscover the freshness of your clothes today!
-            </p>
-
-            <button class="button">Book a service today!</button>
+            <p>From premium dry cleaning to swift wash and fold,
+                we deliver care and convenience. Schedule a pickup and
+                rediscover the freshness of your clothes today!</p>
+            <button class="hero-btn">Book a service today!</button>
         </div>
 
-        <div class="photo">
-            <img src="image.png" alt="Laundry">
+        <div class="hero-image">
+            <img src="https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Large%20Appliances/Washers%20and%20Dryers/Images/308169_nhjiel.png"
+                alt="Laundry Image">
         </div>
-
     </section>
-
 </body>
 
 </html>
