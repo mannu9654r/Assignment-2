@@ -7,7 +7,6 @@
 
 html,
 body {
-    overflow-y: hidden;
     font-family: sans-serif;
 }
 
@@ -16,6 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
+    height: 10vh;
 }
 
 .logo {
@@ -58,11 +58,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 60px;
+    padding: 0px 60px;
+    height: 90vh;
 }
 
 .hero-text {
-    max-width: 500px;
+    width: 50%;
 }
 
 .hero-text h1 {
@@ -93,7 +94,8 @@ body {
 }
 
 .hero-image img {
-    width: 350px;
+    width: 80%;
+    max-height: 80vh;
 }
 
 .nav {
