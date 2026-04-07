@@ -55,7 +55,8 @@
  .hero-container {
      height: calc(100vh - 10vh);
      display: flex;
-     justify-content: space-between;
+     justify-content: center;
+     gap: 5vw;
      align-items: center;
      padding: 0 5vw;
  }
@@ -89,6 +90,20 @@
      border-radius: 1vw;
      font-size: 1vw;
      cursor: pointer;
+ }
+
+ .hero-btn:hover {
+     background-color: #f5bebe;
+ }
+
+ .user-btn:hover {
+     background-color: #fec9c9;
+ }
+
+ .hero-image {
+     display: flex;
+     justify-content: center;
+     align-items: center;
  }
 
  .hero-image img {
