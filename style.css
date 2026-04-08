@@ -1,150 +1,125 @@
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     font-family: Arial, sans-serif;
- }
+/* removing default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- html,
- body {
-     height: 100%;
- }
+/* ================= NAVBAR ================= */
 
- .navbar {
-     height: 10vh;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 0 5vw;
-     background-color: #faeedb;
-     border-bottom: 1px solid #ddd;
- }
+/* trying to create navbar using flex */
+.navbar {
+    height: 10vh; /* using viewport height */
+    display: flex; /* for horizontal layout */
 
- .logo {
-     font-size: 2vw;
-     font-weight: bold;
-     color: #ff8383;
- }
+    /* aligning items */
+    justify-content: space-between;
+    align-items: center;
 
- .nav-menu {
-     display: flex;
-     gap: 2vw;
- }
+    padding: 0 5vw;
+    background-color: #faeedb;
+}
 
- .nav-menu a {
-     text-decoration: none;
-     color: #666;
-     font-size: 1vw;
- }
+/* logo styling */
+.logo {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #ff8383;
+}
 
- .nav-menu a:hover {
-     color: #ff3737;
- }
+/* menu links */
+.nav-menu {
+    display: flex; /* to make links in one row */
+    gap: 2vw; /* space between links */
+}
 
- .user-btn {
-     background-color: #ff3737;
-     border: none;
-     padding: 0.5vw 1vw;
-     border-radius: 1vw;
-     color: #ffedce;
-     font-size: 1vw;
-     cursor: pointer;
- }
+.nav-menu a {
+    text-decoration: none;
+    color: gray;
+    font-size: 1vw;
+}
 
+/* button styling */
+.user-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.5vw 1vw;
+    border-radius: 5px;
+}
 
- .hero-container {
-     height: calc(100vh - 10vh);
-     display: flex;
-     justify-content: center;
-     gap: 5vw;
-     align-items: center;
-     padding: 0 5vw;
- }
+/* ================= HERO SECTION ================= */
 
- .hero-text {
-     max-width: 40vw;
- }
+/* I want hero to take full screen except navbar */
+.hero-container {
+    height: calc(100vh - 10vh); 
+    /* 100vh = full screen
+       minus navbar height
+       so no scrolling */
 
- .hero-text h1 {
-     font-size: 3vw;
-     line-height: 1.2;
-     color: #4a5a68;
- }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
- .hero-text h1 span {
-     color: #ffc193;
- }
+    gap: 5vw;
+    padding: 0 5vw;
+}
 
- .hero-text p {
-     margin: 2vh 0;
-     font-size: 1.2vw;
-     line-height: 1.5;
-     color: #9aa5ad;
- }
+/* text area */
+.hero-text {
+    max-width: 40vw;
+}
 
- .hero-btn {
-     background-color: #ff3737;
-     color: #fff;
-     border: none;
-     padding: 1vw 2vw;
-     border-radius: 1vw;
-     font-size: 1vw;
-     cursor: pointer;
- }
+/* heading */
+.hero-text h1 {
+    font-size: 3vw;
+}
 
- .hero-btn:hover {
-     background-color: #f5bebe;
- }
+/* paragraph */
+.hero-text p {
+    margin-top: 2vh;
+    font-size: 1.2vw;
+}
 
- .user-btn:hover {
-     background-color: #fec9c9;
- }
+/* button */
+.hero-btn {
+    margin-top: 2vh;
+    padding: 1vw 2vw;
+    background-color: red;
+    color: white;
+    border: none;
+}
 
- .hero-image {
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
+/* image */
+.hero-image img {
+    width: 30vw;
+}
 
- .hero-image img {
-     width: 30vw;
-     max-width: 400px;
- }
+/* ================= RESPONSIVE ================= */
 
- @media (max-width: 768px) {
-     .hero-container {
-         flex-direction: column;
-         text-align: center;
-         gap: 3vh;
-     }
+/* for mobile */
+@media (max-width: 768px) {
 
-     .hero-text h1 {
-         font-size: 6vw;
-     }
+    /* changing layout to column */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
-     .hero-text p {
-         font-size: 3vw;
-     }
+    /* increasing text size for mobile */
+    .hero-text h1 {
+        font-size: 6vw;
+    }
 
-     .hero-btn {
-         font-size: 3vw;
-         padding: 2vw 4vw;
-     }
+    .hero-text p {
+        font-size: 3vw;
+    }
 
-     .hero-image img {
-         width: 60vw;
-     }
+    .hero-image img {
+        width: 60vw;
+    }
 
-     .nav-menu a {
-         font-size: 3vw;
-     }
-
-     .user-btn {
-         font-size: 3vw;
-         padding: 1vw 2vw;
-     }
-
-     .logo {
-         font-size: 4vw;
-     }
- }
+    .nav-menu a {
+        font-size: 3vw;
+    }
+}
